@@ -6,83 +6,86 @@
     "channels": [
       {
         "store": "idefix",
-        "price": 17267.52,
-        "url": "#/1435706/?s=13&v=13275&p=1337432076&c=23112&g=1384264825&f=%2fr%2f%3fpr%3d1337432076%26vd%3d13275%26pg%3d1384264825",
+        "price": 17357.46,
+        "url": "#/8481018/?s=9&v=13275&p=1337432076&c=23112&g=1384264825&f=%2fr%2f%3fpr%3d1337432076%26vd%3d13275%26pg%3d1384264825",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:39.328945"
+        "scraped_at": "2026-03-02T11:49:16.931233"
       },
       {
         "store": "Pttavm",
-        "price": 17679.0,
-        "url": "#/1435706/?z=146&s=7&v=11281&p=1337432076&c=15850&g=1425118585&f=%2fr%2f%3fpr%3d1337432076%26vd%3d11281%26pg%3d1425118585",
+        "price": 17399.0,
+        "url": "#/8481018/?z=146&s=1&v=11281&p=1337432076&c=15850&g=1432486664&f=%2fr%2f%3fpr%3d1337432076%26vd%3d11281%26pg%3d1432486664",
         "kargo": "Ücretsiz kargo",
         "kupon": "Sepette 500 TL indirimAKCE500",
-        "scraped_at": "2026-02-26T11:21:39.328945"
-      },
-      {
-        "store": "Pazarama",
-        "price": 18899.0,
-        "url": "#/1435706/?s=12&v=10694&p=1337432076&c=21533&g=1341788816&f=%2fr%2f%3fpr%3d1337432076%26vd%3d10694%26pg%3d1341788816",
-        "kargo": "Ücretsiz kargo",
-        "kupon": "",
-        "scraped_at": "2026-02-26T11:21:39.328945"
+        "scraped_at": "2026-03-02T11:49:16.931233"
       },
       {
         "store": "Amazon Türkiye",
-        "price": 18924.0,
-        "url": "#/1435706/?s=8&v=10001&p=1337432076&c=18101&g=1374680426&f=%2fr%2f%3fpr%3d1337432076%26vd%3d10001%26pg%3d1374680426",
+        "price": 18998.39,
+        "url": "#/8481018/?s=11&v=10001&p=1337432076&c=18101&g=1374680426&f=%2fr%2f%3fpr%3d1337432076%26vd%3d10001%26pg%3d1374680426",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:39.328945"
+        "scraped_at": "2026-03-02T11:49:16.931233"
       },
       {
-        "store": "Hepsiburada",
-        "price": 18949.0,
-        "url": "#/1435706/?s=6&v=12088&p=1337432076&c=17384&g=1375862413&f=%2fr%2f%3fpr%3d1337432076%26vd%3d12088%26pg%3d1375862413",
+        "store": "Teknosa",
+        "price": 18999.0,
+        "url": "#/8481018/?s=13&v=10402&p=1337432076&c=21681&g=1341788817&f=%2fr%2f%3fpr%3d1337432076%26vd%3d10402%26pg%3d1341788817",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:39.328945"
+        "scraped_at": "2026-03-02T11:49:16.931233"
+      },
+      {
+        "store": "n11",
+        "price": 18999.0,
+        "url": "#/8481018/?s=15&v=11070&p=1337432076&c=15663&g=1430823316&f=%2fr%2f%3fpr%3d1337432076%26vd%3d11070%26pg%3d1430823316",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:16.931233"
+      },
+      {
+        "store": "Trendyol",
+        "price": 18999.0,
+        "url": "#/8481018/?s=12&v=11707&p=1337432076&c=20155&g=1432869403&f=%2fr%2f%3fpr%3d1337432076%26vd%3d11707%26pg%3d1432869403",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:16.931233"
       }
     ],
     "history": [
       {
-        "price": 17267.52,
-        "channel_count": 5,
-        "scraped_at": "2026-02-26T10:54:06.707175"
+        "price": 17357.46,
+        "channel_count": 6,
+        "scraped_at": "2026-03-02T11:26:16.300028"
       },
       {
-        "price": 17267.52,
-        "channel_count": 5,
-        "scraped_at": "2026-02-26T10:54:31.166069"
+        "price": 17357.46,
+        "channel_count": 6,
+        "scraped_at": "2026-03-02T11:26:58.681997"
       },
       {
-        "price": 17267.52,
-        "channel_count": 5,
-        "scraped_at": "2026-02-26T10:59:55.798475"
+        "price": 17357.46,
+        "channel_count": 6,
+        "scraped_at": "2026-03-02T11:32:25.614635"
       },
       {
-        "price": 17267.52,
-        "channel_count": 5,
-        "scraped_at": "2026-02-26T11:05:21.018950"
+        "price": 17357.46,
+        "channel_count": 6,
+        "scraped_at": "2026-03-02T11:37:55.886871"
       },
       {
-        "price": 17267.52,
-        "channel_count": 5,
-        "scraped_at": "2026-02-26T11:10:46.442669"
+        "price": 17357.46,
+        "channel_count": 6,
+        "scraped_at": "2026-03-02T11:43:28.830164"
       },
       {
-        "price": 17267.52,
-        "channel_count": 5,
-        "scraped_at": "2026-02-26T11:16:10.336008"
-      },
-      {
-        "price": 17267.52,
-        "channel_count": 5,
-        "scraped_at": "2026-02-26T11:21:34.848187"
+        "price": 17357.46,
+        "channel_count": 6,
+        "scraped_at": "2026-03-02T11:49:12.233840"
       }
     ],
-    "last_updated": "2026-02-26T11:21:34.848187"
+    "last_updated": "2026-03-02T11:49:12.233840"
   },
   "1161241821": {
     "name": "Xiaomi Redmi Note 15",
@@ -90,92 +93,87 @@
     "image": "https://cdn.akakce.com/x/xiaomi/xiaomi-redmi-note-15.jpg",
     "channels": [
       {
-        "store": "Pazarama",
-        "price": 14999.0,
-        "url": "#/1130572/?s=8&v=10694&p=1161241821&c=21533&g=1341792382&f=%2fr%2f%3fpr%3d1161241821%26vd%3d10694%26pg%3d1341792382",
+        "store": "n11",
+        "price": 14989.0,
+        "url": "#/5189822/?s=16&v=11070&p=1161241821&c=15663&g=1347454508&f=%2fr%2f%3fpr%3d1161241821%26vd%3d11070%26pg%3d1347454508",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:47.506991"
+        "scraped_at": "2026-03-02T11:49:25.429456"
+      },
+      {
+        "store": "Teknosa",
+        "price": 14999.0,
+        "url": "#/5189822/?s=11&v=10402&p=1161241821&c=21681&g=1341792383&f=%2fr%2f%3fpr%3d1161241821%26vd%3d10402%26pg%3d1341792383",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:25.429456"
+      },
+      {
+        "store": "Trendyol",
+        "price": 14999.0,
+        "url": "#/5189822/?s=8&v=11707&p=1161241821&c=20155&g=1432869402&f=%2fr%2f%3fpr%3d1161241821%26vd%3d11707%26pg%3d1432869402",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:25.429456"
       },
       {
         "store": "Amazon Türkiye",
-        "price": 15074.0,
-        "url": "#/1130572/?s=14&v=10001&p=1161241821&c=18101&g=1341289649&f=%2fr%2f%3fpr%3d1161241821%26vd%3d10001%26pg%3d1341289649",
+        "price": 14999.0,
+        "url": "#/5189822/?s=5&v=10001&p=1161241821&c=18101&g=1374680213&f=%2fr%2f%3fpr%3d1161241821%26vd%3d10001%26pg%3d1374680213",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:47.506991"
+        "scraped_at": "2026-03-02T11:49:25.429456"
+      },
+      {
+        "store": "Pazarama",
+        "price": 14999.0,
+        "url": "#/5189822/?s=4&v=10694&p=1161241821&c=21533&g=1341792382&f=%2fr%2f%3fpr%3d1161241821%26vd%3d10694%26pg%3d1341792382",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:25.429456"
       },
       {
         "store": "Pttavm",
         "price": 15300.64,
-        "url": "#/1130572/?z=146&s=3&v=11281&p=1161241821&c=15850&g=1423206374&f=%2fr%2f%3fpr%3d1161241821%26vd%3d11281%26pg%3d1423206374",
+        "url": "#/5189822/?z=146&s=12&v=11281&p=1161241821&c=15850&g=1423206374&f=%2fr%2f%3fpr%3d1161241821%26vd%3d11281%26pg%3d1423206374",
         "kargo": "Ücretsiz kargo",
         "kupon": "Sepette 500 TL indirimAKCE500",
-        "scraped_at": "2026-02-26T11:21:47.506991"
-      },
-      {
-        "store": "idefix",
-        "price": 15445.44,
-        "url": "#/1130572/?s=9&v=13275&p=1161241821&c=23112&g=1349858523&f=%2fr%2f%3fpr%3d1161241821%26vd%3d13275%26pg%3d1349858523",
-        "kargo": "Ücretsiz kargo",
-        "kupon": "",
-        "scraped_at": "2026-02-26T11:21:47.506991"
-      },
-      {
-        "store": "Hepsiburada",
-        "price": 15599.0,
-        "url": "#/1130572/?s=5&v=12088&p=1161241821&c=17384&g=1341577371&f=%2fr%2f%3fpr%3d1161241821%26vd%3d12088%26pg%3d1341577371",
-        "kargo": "Ücretsiz kargo",
-        "kupon": "",
-        "scraped_at": "2026-02-26T11:21:47.506991"
-      },
-      {
-        "store": "Trendyol",
-        "price": 15599.0,
-        "url": "#/1130572/?s=1&v=11707&p=1161241821&c=20155&g=1428640107&f=%2fr%2f%3fpr%3d1161241821%26vd%3d11707%26pg%3d1428640107",
-        "kargo": "Ücretsiz kargo",
-        "kupon": "",
-        "scraped_at": "2026-02-26T11:21:47.506991"
+        "scraped_at": "2026-03-02T11:49:25.429456"
       }
     ],
     "history": [
       {
-        "price": 14999.0,
+        "price": 14989.0,
         "channel_count": 6,
-        "scraped_at": "2026-02-26T10:54:06.707175"
+        "scraped_at": "2026-03-02T11:26:16.300028"
       },
       {
-        "price": 14999.0,
+        "price": 14989.0,
         "channel_count": 6,
-        "scraped_at": "2026-02-26T10:54:31.166069"
+        "scraped_at": "2026-03-02T11:26:58.681997"
       },
       {
-        "price": 14999.0,
+        "price": 14989.0,
         "channel_count": 6,
-        "scraped_at": "2026-02-26T10:59:55.798475"
+        "scraped_at": "2026-03-02T11:32:25.614635"
       },
       {
-        "price": 14999.0,
+        "price": 14989.0,
         "channel_count": 6,
-        "scraped_at": "2026-02-26T11:05:21.018950"
+        "scraped_at": "2026-03-02T11:37:55.886871"
       },
       {
-        "price": 14999.0,
+        "price": 14989.0,
         "channel_count": 6,
-        "scraped_at": "2026-02-26T11:10:46.442669"
+        "scraped_at": "2026-03-02T11:43:28.830164"
       },
       {
-        "price": 14999.0,
+        "price": 14989.0,
         "channel_count": 6,
-        "scraped_at": "2026-02-26T11:16:10.336008"
-      },
-      {
-        "price": 14999.0,
-        "channel_count": 6,
-        "scraped_at": "2026-02-26T11:21:34.848187"
+        "scraped_at": "2026-03-02T11:49:12.233840"
       }
     ],
-    "last_updated": "2026-02-26T11:21:34.848187"
+    "last_updated": "2026-03-02T11:49:12.233840"
   },
   "1337435215": {
     "name": "Xiaomi Redmi Note 15 Pro Plus Siyah",
@@ -183,115 +181,280 @@
     "image": "https://cdn.akakce.com/x/xiaomi/xiaomi-redmi-note-15-pro-plus-256-gb-siyah.jpg",
     "channels": [
       {
-        "store": "Amazon Türkiye",
-        "price": 30131.85,
-        "url": "#/2127989/?s=13&v=10001&p=1337435215&c=18101&g=1427811446&f=%2fr%2f%3fpr%3d1337435215%26vd%3d10001%26pg%3d1427811446",
+        "store": "idefix",
+        "price": 29856.0,
+        "url": "#/9006449/?s=12&v=13275&p=1337435215&c=23112&g=1425572544&f=%2fr%2f%3fpr%3d1337435215%26vd%3d13275%26pg%3d1425572544",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
       },
       {
-        "store": "Trendyol",
-        "price": 30131.85,
-        "url": "#/2127989/?s=16&v=11707&p=1337435215&c=20155&g=1425289515&f=%2fr%2f%3fpr%3d1337435215%26vd%3d11707%26pg%3d1425289515",
-        "kargo": "",
+        "store": "Teknosa",
+        "price": 29999.0,
+        "url": "#/9006449/?s=15&v=10402&p=1337435215&c=21681&g=1341577591&f=%2fr%2f%3fpr%3d1337435215%26vd%3d10402%26pg%3d1341577591",
+        "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
+      },
+      {
+        "store": "Amazon Türkiye",
+        "price": 29999.0,
+        "url": "#/9006449/?s=13&v=10001&p=1337435215&c=18101&g=1427811446&f=%2fr%2f%3fpr%3d1337435215%26vd%3d10001%26pg%3d1427811446",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:33.600322"
       },
       {
         "store": "Hepsiburada",
-        "price": 30149.0,
-        "url": "#/2127989/?s=15&v=12088&p=1337435215&c=17384&g=1375854952&f=%2fr%2f%3fpr%3d1337435215%26vd%3d12088%26pg%3d1375854952",
+        "price": 30249.0,
+        "url": "#/9006449/?s=11&v=12088&p=1337435215&c=17384&g=1375854952&f=%2fr%2f%3fpr%3d1337435215%26vd%3d12088%26pg%3d1375854952",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
       },
       {
-        "store": "idefix",
-        "price": 30241.01,
-        "url": "#/2127989/?s=14&v=13275&p=1337435215&c=23112&g=1430064122&f=%2fr%2f%3fpr%3d1337435215%26vd%3d13275%26pg%3d1430064122",
+        "store": "Trendyol",
+        "price": 30550.0,
+        "url": "#/9006449/?s=8&v=11707&p=1337435215&c=20155&g=1432682452&f=%2fr%2f%3fpr%3d1337435215%26vd%3d11707%26pg%3d1432682452",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
       },
       {
         "store": "Pttavm",
-        "price": 30948.99,
-        "url": "#/2127989/?z=146&s=11&v=11281&p=1337435215&c=15850&g=1351585620&f=%2fr%2f%3fpr%3d1337435215%26vd%3d11281%26pg%3d1351585620",
+        "price": 30623.04,
+        "url": "#/9006449/?z=146&s=10&v=11281&p=1337435215&c=15850&g=1430484270&f=%2fr%2f%3fpr%3d1337435215%26vd%3d11281%26pg%3d1430484270",
         "kargo": "Ücretsiz kargo",
         "kupon": "Sepette 1.000 TL indirimAKCE1000",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
       },
       {
         "store": "Pazarama",
         "price": 32300.0,
-        "url": "#/2127989/?s=5&v=10694&p=1337435215&c=21533&g=1426589394&f=%2fr%2f%3fpr%3d1337435215%26vd%3d10694%26pg%3d1426589394",
+        "url": "#/9006449/?s=3&v=10694&p=1337435215&c=21533&g=1426589394&f=%2fr%2f%3fpr%3d1337435215%26vd%3d10694%26pg%3d1426589394",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
       },
       {
         "store": "A101",
         "price": 32899.0,
-        "url": "#/2127989/?s=4&v=3192&p=1337435215&c=18790&g=1351905607&f=%2fr%2f%3fpr%3d1337435215%26vd%3d3192%26pg%3d1351905607",
+        "url": "#/9006449/?s=2&v=3192&p=1337435215&c=18790&g=1351905607&f=%2fr%2f%3fpr%3d1337435215%26vd%3d3192%26pg%3d1351905607",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
       },
       {
         "store": "Media Markt",
         "price": 32999.0,
-        "url": "#/2127989/?s=3&v=1494&p=1337435215&c=15743&g=1338010817&f=%2fr%2f%3fpr%3d1337435215%26vd%3d1494%26pg%3d1338010817",
+        "url": "#/9006449/?s=1&v=1494&p=1337435215&c=15743&g=1338010817&f=%2fr%2f%3fpr%3d1337435215%26vd%3d1494%26pg%3d1338010817",
         "kargo": "Ücretsiz kargo",
         "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
-      },
-      {
-        "store": "Turkcell",
-        "price": 32999.0,
-        "url": "#/2127989/?s=2&v=11222&p=1337435215&c=20753&g=1416966973&f=%2fr%2f%3fpr%3d1337435215%26vd%3d11222%26pg%3d1416966973",
-        "kargo": "Ücretsiz kargo",
-        "kupon": "",
-        "scraped_at": "2026-02-26T11:21:57.157624"
+        "scraped_at": "2026-03-02T11:49:33.600322"
       }
     ],
     "history": [
       {
-        "price": 30131.85,
+        "price": 29856.0,
         "channel_count": 9,
-        "scraped_at": "2026-02-26T10:54:06.707175"
+        "scraped_at": "2026-03-02T11:26:16.300028"
       },
       {
-        "price": 30131.85,
+        "price": 29856.0,
         "channel_count": 9,
-        "scraped_at": "2026-02-26T10:54:31.166069"
+        "scraped_at": "2026-03-02T11:26:58.681997"
       },
       {
-        "price": 30131.85,
+        "price": 29856.0,
         "channel_count": 9,
-        "scraped_at": "2026-02-26T10:59:55.798475"
+        "scraped_at": "2026-03-02T11:32:25.614635"
       },
       {
-        "price": 30131.85,
+        "price": 29856.0,
         "channel_count": 9,
-        "scraped_at": "2026-02-26T11:05:21.018950"
+        "scraped_at": "2026-03-02T11:37:55.886871"
       },
       {
-        "price": 30131.85,
+        "price": 29856.0,
         "channel_count": 9,
-        "scraped_at": "2026-02-26T11:10:46.442669"
+        "scraped_at": "2026-03-02T11:43:28.830164"
       },
       {
-        "price": 30131.85,
+        "price": 29856.0,
         "channel_count": 9,
-        "scraped_at": "2026-02-26T11:16:10.336008"
-      },
-      {
-        "price": 30131.85,
-        "channel_count": 9,
-        "scraped_at": "2026-02-26T11:21:34.848187"
+        "scraped_at": "2026-03-02T11:49:12.233840"
       }
     ],
-    "last_updated": "2026-02-26T11:21:34.848187"
+    "last_updated": "2026-03-02T11:49:12.233840"
+  },
+  "692136486": {
+    "name": "Xiaomi Redmi Note 14",
+    "url": "https://www.akakce.com/cep-telefonu/en-ucuz-xiaomi-redmi-note-14-fiyati,692136486.html",
+    "image": "https://cdn.akakce.com/x/xiaomi/xiaomi-redmi-note-14.jpg",
+    "channels": [
+      {
+        "store": "Pttavm",
+        "price": 11115.0,
+        "url": "#/6005888/?z=146&s=7&v=11281&p=692136486&c=15850&g=1431071859&f=%2fr%2f%3fpr%3d692136486%26vd%3d11281%26pg%3d1431071859",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "Sepette 250 TL indirimAKCE250",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      },
+      {
+        "store": "Satıcı",
+        "price": 11250.0,
+        "url": "#/6005888/?s=11&v=4581&p=692136486&c=21386&g=1428353512&f=%2fr%2f%3fpr%3d692136486%26vd%3d4581%26pg%3d1428353512",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      },
+      {
+        "store": "idefix",
+        "price": 11697.6,
+        "url": "#/6005888/?s=16&v=13275&p=692136486&c=23112&g=1424980698&f=%2fr%2f%3fpr%3d692136486%26vd%3d13275%26pg%3d1424980698",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      },
+      {
+        "store": "n11",
+        "price": 11799.0,
+        "url": "#/6005888/?s=8&v=11070&p=692136486&c=15663&g=1352478936&f=%2fr%2f%3fpr%3d692136486%26vd%3d11070%26pg%3d1352478936",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      },
+      {
+        "store": "Pazarama",
+        "price": 11841.75,
+        "url": "#/6005888/?s=5&v=10694&p=692136486&c=21533&g=1349139361&f=%2fr%2f%3fpr%3d692136486%26vd%3d10694%26pg%3d1349139361",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      },
+      {
+        "store": "Hepsiburada",
+        "price": 11899.0,
+        "url": "#/6005888/?s=4&v=12088&p=692136486&c=17384&g=1260737869&f=%2fr%2f%3fpr%3d692136486%26vd%3d12088%26pg%3d1260737869",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      },
+      {
+        "store": "Amazon Türkiye",
+        "price": 11899.0,
+        "url": "#/6005888/?s=2&v=10001&p=692136486&c=18101&g=1215636995&f=%2fr%2f%3fpr%3d692136486%26vd%3d10001%26pg%3d1215636995",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      },
+      {
+        "store": "Trendyol",
+        "price": 14699.0,
+        "url": "#/6005888/?s=1&v=11707&p=692136486&c=20155&g=1383686862&f=%2fr%2f%3fpr%3d692136486%26vd%3d11707%26pg%3d1383686862",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:51.702603"
+      }
+    ],
+    "history": [
+      {
+        "price": 11115.0,
+        "channel_count": 7,
+        "scraped_at": "2026-03-02T11:41:20.734104"
+      },
+      {
+        "price": 11115.0,
+        "channel_count": 8,
+        "scraped_at": "2026-03-02T11:43:28.830164"
+      },
+      {
+        "price": 11115.0,
+        "channel_count": 8,
+        "scraped_at": "2026-03-02T11:49:12.233840"
+      }
+    ],
+    "last_updated": "2026-03-02T11:49:12.233840"
+  },
+  "692136487": {
+    "name": "Xiaomi Redmi Note 14 Pro",
+    "url": "https://www.akakce.com/cep-telefonu/en-ucuz-xiaomi-redmi-note-14-pro-fiyati,692136487.html",
+    "image": "https://cdn.akakce.com/x/xiaomi/xiaomi-redmi-note-14-pro.jpg",
+    "channels": [
+      {
+        "store": "Pttavm",
+        "price": 12249.0,
+        "url": "#/6827907/?z=146&s=4&v=11281&p=692136487&c=15850&g=1384279927&f=%2fr%2f%3fpr%3d692136487%26vd%3d11281%26pg%3d1384279927",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "Sepette 250 TL indirimAKCE250",
+        "scraped_at": "2026-03-02T11:49:42.625804"
+      },
+      {
+        "store": "idefix",
+        "price": 13508.07,
+        "url": "#/6827907/?s=6&v=13275&p=692136487&c=23112&g=1425062072&f=%2fr%2f%3fpr%3d692136487%26vd%3d13275%26pg%3d1425062072",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:42.625804"
+      },
+      {
+        "store": "Satıcı",
+        "price": 15599.0,
+        "url": "#/6827907/?s=16&v=5522&p=692136487&c=23909&g=1419081650&f=%2fr%2f%3fpr%3d692136487%26vd%3d5522%26pg%3d1419081650",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:42.625804"
+      },
+      {
+        "store": "n11",
+        "price": 15799.0,
+        "url": "#/6827907/?s=10&v=11070&p=692136487&c=15663&g=1355954851&f=%2fr%2f%3fpr%3d692136487%26vd%3d11070%26pg%3d1355954851",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:42.625804"
+      },
+      {
+        "store": "Pazarama",
+        "price": 15864.05,
+        "url": "#/6827907/?s=14&v=10694&p=692136487&c=21533&g=1427332336&f=%2fr%2f%3fpr%3d692136487%26vd%3d10694%26pg%3d1427332336",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:42.625804"
+      },
+      {
+        "store": "Hepsiburada",
+        "price": 15899.0,
+        "url": "#/6827907/?s=11&v=12088&p=692136487&c=17384&g=1432387452&f=%2fr%2f%3fpr%3d692136487%26vd%3d12088%26pg%3d1432387452",
+        "kargo": "Ücretsiz kargo",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:42.625804"
+      },
+      {
+        "store": "Trendyol",
+        "price": 15899.0,
+        "url": "#/6827907/?s=9&v=11707&p=692136487&c=20155&g=1359296520&f=%2fr%2f%3fpr%3d692136487%26vd%3d11707%26pg%3d1359296520",
+        "kargo": "",
+        "kupon": "",
+        "scraped_at": "2026-03-02T11:49:42.625804"
+      }
+    ],
+    "history": [
+      {
+        "price": 12249.0,
+        "channel_count": 7,
+        "scraped_at": "2026-03-02T11:41:40.190742"
+      },
+      {
+        "price": 12249.0,
+        "channel_count": 7,
+        "scraped_at": "2026-03-02T11:43:28.830164"
+      },
+      {
+        "price": 12249.0,
+        "channel_count": 7,
+        "scraped_at": "2026-03-02T11:49:12.233840"
+      }
+    ],
+    "last_updated": "2026-03-02T11:49:12.233840"
   }
 }
