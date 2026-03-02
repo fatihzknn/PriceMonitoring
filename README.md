@@ -1,94 +1,114 @@
-# 📱 Xiaomi Fiyat Monitor
+# 📱 Xiaomi Price Monitor
 
-Akakce üzerinden Xiaomi ürünlerinin fiyatlarını otomatik takip eden, 
-gerçek zamanlı web dashboard'u ile görselleştiren sistem.
+A system that automatically tracks **Xiaomi product prices** from **Akakce** and visualizes them through a real-time web dashboard.
 
 ---
 
-## 🚀 Kurulum (3 Adım)
+## 🚀 Installation (3 Steps)
 
-### 1. Python bağımlılıklarını kur
+### 1. Install Python dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. (İsteğe bağlı) Sadece bir kez el ile tara
+### 2. (Optional) Run a manual scrape once
+
 ```bash
 python scraper.py
 ```
 
-### 3. Dashboard'u başlat
+### 3. Start the dashboard
+
 ```bash
 python app.py
 ```
 
-Tarayıcında aç: **http://localhost:5000**
+Open in your browser: **[http://localhost:5000](http://localhost:5000)**
 
 ---
 
-## 📦 Dosya Yapısı
+## 📦 Project Structure
 
 ```
 xiaomi-monitor/
-├── app.py           → Flask web sunucusu (dashboard backend)
+├── app.py           → Flask web server (dashboard backend)
 ├── scraper.py       → Akakce scraper
-├── requirements.txt → Python kütüphaneleri
-├── prices.json      → Fiyat veritabanı (otomatik oluşur)
+├── requirements.txt → Python dependencies
+├── prices.json      → Price database (auto-generated)
 └── templates/
-    └── dashboard.html → Görsel panel
+    └── dashboard.html → Visual dashboard
 ```
 
 ---
 
-## ⚙️ Ayarlar
+## ⚙️ Configuration
 
-### Tarama aralığını değiştir
-`app.py` içindeki `SCRAPE_INTERVAL` değerini saniye cinsinden ayarla:
+### Change scraping interval
+
+Modify the `SCRAPE_INTERVAL` value in `app.py` (in seconds):
+
 ```python
-SCRAPE_INTERVAL = 300  # 5 dakika (varsayılan)
-SCRAPE_INTERVAL = 600  # 10 dakika
-SCRAPE_INTERVAL = 3600 # 1 saat
+SCRAPE_INTERVAL = 300   # 5 minutes (default)
+SCRAPE_INTERVAL = 600   # 10 minutes
+SCRAPE_INTERVAL = 3600  # 1 hour
 ```
 
-### Yeni ürün ekle
-`scraper.py` içindeki `PRODUCTS` listesine yeni ürün ekle:
+---
+
+### Add a new product
+
+Add a new item to the `PRODUCTS` list in `scraper.py`:
+
 ```python
 {
     "name": "Xiaomi 13T",
     "url": "https://www.akakce.com/cep-telefonu/en-ucuz-xiaomi-13t-fiyati,...html",
-    "image": ""  # boş bırakabilirsin
+    "image": ""  # can be left empty
 },
 ```
 
 ---
 
-## 🖥️ Dashboard Özellikleri
+## 🖥️ Dashboard Features
 
-- **Canlı fiyat takibi** – Her 30 saniyede otomatik yenilenir
-- **Fiyat grafiği** – Her ürün için tarihsel fiyat grafiği
-- **Değişim göstergesi** – Yeşil düşüş, kırmızı artış
-- **Manuel tarama** – "TARA" butonuyla anında güncelle
-- **Akakce linki** – Her üründe doğrudan ürün sayfasına git
-
----
-
-## ⚠️ Önemli Notlar
-
-- Akakce site yapısı değişirse `scraper.py` içindeki CSS seçicileri güncellemeniz gerekebilir
-- Çok sık tarama yapmak IP engellemesine yol açabilir – 5+ dakika önerilir
-- Fiyatlar `prices.json` dosyasında birikimli saklanır, silinirse geçmiş sıfırlanır
+* **Live price tracking** – Automatically refreshes every 30 seconds
+* **Price history chart** – Historical price graph for each product
+* **Change indicator** – Green for price drops, red for price increases
+* **Manual scraping** – Instantly update prices with the "SCAN" button
+* **Direct Akakce link** – Navigate directly to the product page
 
 ---
 
-## 🔧 Sorun Giderme
+## ⚠️ Important Notes
 
-**"Fiyat bulunamadı" görüyorum:**
-- Akakce ürün URL'ini kontrol et, ürün sayfasında gerçekten fiyat var mı?
-- Site yapısı değiştiyse, tarayıcıda sayfayı aç, fiyat elementine sağ tık → "İncele" ile doğru CSS seçiciyi bul ve `scraper.py` içine ekle
-
-**Port 5000 kullanımda:**
-`app.py` son satırındaki `port=5000` değerini `port=5001` yap
+* If Akakce changes its website structure, you may need to update the CSS selectors inside `scraper.py`.
+* Scraping too frequently may result in IP blocking — 5+ minutes is recommended.
+* Prices accumulate in the `prices.json` file. If deleted, price history will reset.
 
 ---
 
-*Xiaomi Fiyat Monitor — otomatik fiyat takip sistemi*
+## 🔧 Troubleshooting
+
+### “Price not found” error
+
+* Check the Akakce product URL — does the page actually display a price?
+* If the site structure changed:
+
+  * Open the product page in your browser
+  * Right-click the price → **Inspect**
+  * Find the correct CSS selector and update it inside `scraper.py`
+
+---
+
+### Port 5000 already in use
+
+Change the `port=5000` value at the bottom of `app.py` to:
+
+```python
+port=5001
+```
+
+---
+
+*Xiaomi Price Monitor — Automated price tracking system*
