@@ -329,6 +329,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
         <button class="btn btn-ghost btn-sm" id="stopBtn" onclick="stopScan()" style="display:none;color:var(--red);border-color:rgba(214,59,47,.3)">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="6" y="6" width="12" height="12" rx="1"/></svg>Stop
         </button>
+        <button class="btn btn-ghost btn-sm" onclick="showTab('violations')" id="violTab" style="color:var(--red)">⚠ Violations</button>
         <button class="btn btn-accent" onclick="scanAll()" id="scanBtn">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>Scan All
         </button>
@@ -381,6 +382,24 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   <button class="nx" onclick="dimissN()">✕</button>
 </div>
 
+<!-- Violations Panel -->
+<div id="violPanel" style="display:none;padding:16px 24px 32px">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+    <div>
+      <h2 style="font-size:17px;font-weight:700">⚠ Price Violations</h2>
+      <p style="font-size:11px;color:var(--muted);font-family:var(--mono);margin-top:2px">Stores selling below RRP by more than 499 TL</p>
+    </div>
+    <div style="display:flex;gap:8px">
+      <a href="/api/violations/download" class="btn btn-ghost btn-sm" style="text-decoration:none">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Excel
+      </a>
+      <button class="btn btn-ghost btn-sm" onclick="showTab('products')">← Back</button>
+    </div>
+  </div>
+  <div id="violTable"></div>
+</div>
+
 <script>
 const $ = id => document.getElementById(id);
 let sel = new Set(), srData = [], charts = {}, state = {};
@@ -391,7 +410,71 @@ const fmt = n => n == null ? '—' : new Intl.NumberFormat('tr-TR').format(Math.
 const fmtT = iso => iso ? new Date(iso).toLocaleString('en-GB',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '—';
 function toast(msg, t='') { const el=$('toast'); el.textContent=msg; el.className='toast show'+(t?' '+t:''); clearTimeout(el._t); el._t=setTimeout(()=>el.className='toast',3000); }
 
-// ── Interval ──
+// ── Tabs ──
+function showTab(tab) {
+  const isViol = tab === 'violations';
+  $('violPanel').style.display = isViol ? 'block' : 'none';
+  $('emptyMain').style.display = (!isViol && !(state.products||[]).length) ? 'flex' : 'none';
+  $('grid').style.display = isViol ? 'none' : '';
+  document.querySelector('.stats').style.display = isViol ? 'none' : '';
+  if (isViol) fetchViolations();
+}
+
+// ── Violations ──
+async function fetchViolations() {
+  try {
+    const r = await fetch('/api/violations');
+    const d = await r.json();
+    renderViolations(d);
+  } catch(e) { $('violTable').innerHTML = '<p style="color:var(--muted);font-size:12px">Could not load violations.</p>'; }
+}
+
+function renderViolations({violations=[], count=0}) {
+  if (!violations.length) {
+    $('violTable').innerHTML = `<div style="text-align:center;padding:60px;color:var(--muted)">
+      <div style="font-size:40px;margin-bottom:12px">✅</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:6px">No violations detected</div>
+      <div style="font-size:12px">Violations are recorded when a store sells more than 499 TL below RRP</div>
+    </div>`;
+    return;
+  }
+  $('violTable').innerHTML = `
+    <div style="font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:10px">${count} violation(s) recorded</div>
+    <div style="overflow-x:auto">
+    <table style="width:100%;border-collapse:collapse;font-size:11px">
+      <thead>
+        <tr style="background:var(--text);color:white">
+          <th style="padding:10px 12px;text-align:left;white-space:nowrap">Date & Time</th>
+          <th style="padding:10px 12px;text-align:left">Product</th>
+          <th style="padding:10px 12px;text-align:left">Store</th>
+          <th style="padding:10px 12px;text-align:right">RRP</th>
+          <th style="padding:10px 12px;text-align:right">Price</th>
+          <th style="padding:10px 12px;text-align:right">Diff</th>
+          <th style="padding:10px 12px;text-align:right">%</th>
+          <th style="padding:10px 12px;text-align:center">Screenshot</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${violations.map((v,i) => `
+          <tr style="background:${i%2===0?'#fff':'#fef2f2'};border-bottom:1px solid var(--border)">
+            <td style="padding:9px 12px;font-family:var(--mono);white-space:nowrap;color:var(--muted)">${v.timestamp}</td>
+            <td style="padding:9px 12px;font-weight:600">${v.product}</td>
+            <td style="padding:9px 12px">${v.store}</td>
+            <td style="padding:9px 12px;text-align:right;font-family:var(--mono)">${fmt(v.rrp)} TL</td>
+            <td style="padding:9px 12px;text-align:right;font-family:var(--mono);color:var(--red);font-weight:700">${fmt(v.price)} TL</td>
+            <td style="padding:9px 12px;text-align:right;font-family:var(--mono);color:var(--red)">-${fmt(v.diff)} TL</td>
+            <td style="padding:9px 12px;text-align:right;font-family:var(--mono);color:var(--red)">-${v.diff_pct}%</td>
+            <td style="padding:9px 12px;text-align:center">
+              ${v.screenshot && v.screenshot !== '—'
+                ? `<a href="/api/violations/screenshot/${v.screenshot}" target="_blank" style="color:var(--accent);font-weight:600;font-size:10px">View 📷</a>`
+                : '<span style="color:var(--muted2)">—</span>'}
+            </td>
+          </tr>`).join('')}
+      </tbody>
+    </table></div>`;
+}
+
+
 async function setInterval_(m) {
   currentInterval = m;
   document.querySelectorAll('.iv-btn').forEach(b => b.classList.toggle('active', +b.dataset.min === m));

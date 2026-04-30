@@ -1,12 +1,20 @@
 from flask import Flask, jsonify, send_from_directory, request
 import json, os, threading, time, sys, re
 from datetime import datetime
+from violation_reporter import process_violations
 from scraper import (
     search_akakce, scrape_product_channels, scrape_watched_products,
     load_data, save_data, load_watched, save_watched, DATA_FILE, WATCHED_FILE,
     set_progress_callback
 )
 
+
+import os, sys
+print("="*50)
+print("ÇALIŞAN KLASÖR:", os.path.dirname(os.path.abspath(__file__)))
+print("dashboard.html var mı:", os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard.html")))
+print("dashboard.html boyutu:", os.path.getsize(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dashboard.html")), "bytes")
+print("="*50)
 if getattr(sys, 'frozen', False):
     BASE_DIR = os.path.dirname(sys.executable)
 else:
@@ -97,6 +105,18 @@ def check_and_alert(pid, product_name, old_price, new_price, target_price):
 
 # ── Background scraper ────────────────────────────────────────
 
+def check_violations(product_name, rrp, channels):
+    """RRP ihlallerini tespit et, ekran görüntüsü al, Excel'e kaydet"""
+    if not rrp or not channels:
+        return
+    try:
+        violations = process_violations(product_name, rrp, channels)
+        if violations:
+            print(f"  [REPORT] {len(violations)} ihlal raporlandı → violations_report.xlsx")
+    except Exception as e:
+        print(f"  [ViolationReport] Error: {e}")
+
+
 def _do_scrape():
     global _scraping, _last_scrape, _stop_requested, _scan_progress
     old_data = load_data()
@@ -126,6 +146,7 @@ def _do_scrape():
         hist = [h["price"] for h in pdata.get("history", []) if h.get("price")]
         if hist:
             check_and_alert(pid, pdata.get("name", pid), old_prices.get(pid), hist[-1], targets.get(pid))
+            check_violations(pdata.get("name", pid), targets.get(pid), pdata.get("channels", []))
 
     _scraping = False
     _last_scrape = datetime.now().isoformat()
@@ -275,6 +296,7 @@ def api_scrape_one(pid):
             data[pid]["history"] = data[pid]["history"][-100:]
             save_data(data)
             check_and_alert(pid, product["name"], old_min, min_price, load_targets().get(pid))
+            check_violations(product["name"], load_targets().get(pid), channels)
     threading.Thread(target=run, daemon=True).start()
     return jsonify({"status": "ok"})
 
@@ -357,3 +379,49 @@ if __name__ == "__main__":
     print("="*50 + "\n")
 
     app.run(debug=False, host="0.0.0.0", port=PORT)
+
+
+@app.route("/api/violations", methods=["GET"])
+def api_violations():
+    import openpyxl
+    report = os.path.join(BASE_DIR, "violations_report.xlsx")
+    if not os.path.exists(report):
+        return jsonify({"violations": [], "count": 0})
+    try:
+        wb = openpyxl.load_workbook(report, data_only=True)
+        ws = wb.active
+        rows = []
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            if row[0]:  # tarih varsa
+                rows.append({
+                    "timestamp": str(row[0]) if row[0] else "",
+                    "product": str(row[1]) if row[1] else "",
+                    "store": str(row[2]) if row[2] else "",
+                    "rrp": row[3],
+                    "price": row[4],
+                    "diff": row[5],
+                    "diff_pct": row[6],
+                    "comment": str(row[7]) if row[7] else "",
+                    "note": str(row[8]) if row[8] else "",
+                    "screenshot": str(row[9]) if row[9] else "",
+                    "url": str(row[10]) if row[10] else "",
+                })
+        return jsonify({"violations": list(reversed(rows)), "count": len(rows)})
+    except Exception as e:
+        return jsonify({"violations": [], "count": 0, "error": str(e)})
+
+
+@app.route("/api/violations/screenshot/<filename>")
+def api_screenshot(filename):
+    from flask import send_from_directory
+    evidence_dir = os.path.join(BASE_DIR, "evidence")
+    return send_from_directory(evidence_dir, filename)
+
+
+@app.route("/api/violations/download")
+def api_violations_download():
+    from flask import send_file
+    report = os.path.join(BASE_DIR, "violations_report.xlsx")
+    if not os.path.exists(report):
+        return "No report yet", 404
+    return send_file(report, as_attachment=True, download_name="violations_report.xlsx")
